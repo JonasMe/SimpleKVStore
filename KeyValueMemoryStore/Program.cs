@@ -6,7 +6,7 @@ using Mersholm.KVStore.Core.WAL;
 class Program
 {
     const string WAL_PATH = "_wal.data";
-    static readonly string SNAPSHOT_PATH = "_snapshot.data";
+    const string SNAPSHOT_PATH = "_snapshot.data";
 
     static async Task Main(string[] args)
     {

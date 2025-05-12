@@ -87,9 +87,12 @@ namespace Mersholm.KVStore.Core.WAL
             return BitConverter.ToInt32(buffer);
         }
 
-        private string ReadString(FileStream fs, int length)
+        private string? ReadString(FileStream fs, int length)
         {
-            byte[] buffer = new byte[length];
+            if (length < 0 || length > 1024 * 1024)
+                return null;
+
+            Span<byte> buffer = length <= 1024 ? stackalloc byte[length] : new byte[length];
             fs.Read(buffer);
             return Encoding.UTF8.GetString(buffer);
         }
