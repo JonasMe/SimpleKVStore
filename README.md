@@ -3,7 +3,7 @@
 
 ### Tanker om løsning
 Jeg ville gerne lave koden så skalerbar, fail-safe og performant som muligt på 2 timer. Som minimum ved at skrive til en WAL ved hjælp af direkte memory håndtering og udenom GC, på samme tid ville jeg ved min WAL skrivning gerne sørger for kun at arbejde på stacken og kun have én enkelt IO write uden overhead.
-Jeg ville gerne undgå flaskehalse samt at der ikke kunne genoprettes nøglesæt hvis systemet gik ned.
+Jeg ville gerne undgå flaskehalse samt at der kunne genoprettes nøglesæt effektivt hvis systemet gik ned.
 
 ### Forbedringer
 Ved mere tid ville jeg gerne tilføje:
