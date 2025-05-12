@@ -9,6 +9,7 @@ Jeg ville gerne undgå flaskehalse samt at der kunne genoprettes nøglesæt effe
 Ved mere tid ville jeg gerne tilføje:
 - Atomiske operationer
 - Asynkron write/read til WAL og snapshot
+- 100% undgåelse af HEAP i append ved at udnytte span<byte> i stedet for at lave et nyt byte array.
 - Tilføjelse af logging og bedre fejl-håndtering
 - Gøre serialiseringen abstrakt så MessagePack kan skiftes ud
 - TTL på nøgler
